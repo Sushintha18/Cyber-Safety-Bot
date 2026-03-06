@@ -4,9 +4,9 @@
 
 ### Project Overview
 
-Cyber Safety Bot is a simple web-based chatbot that helps users understand common cyber scams and basic online safety practices. The bot shows scam examples, provides safety tips, and allows users to check suspicious messages.
+Cyber Safety Bot is a simple web-based chatbot designed to help users understand common online scams and basic cyber safety practices. The bot provides examples of cyber scams, offers safety tips, and allows users to check suspicious messages.
 
-The project is built using HTML, CSS, and JavaScript and runs directly in a web browser.
+The project is built using HTML, CSS, and JavaScript and runs directly in a web browser without requiring any backend server.
 
 ### Technologies Used
 
@@ -14,133 +14,67 @@ The project is built using HTML, CSS, and JavaScript and runs directly in a web 
 - CSS
 - JavaScript
 
-### index.html
+### Project Structure
 
-bash
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Cyber Safety Bot</title>
-<link rel="stylesheet" href="style.css">
-</head>
+Cyber-Safety-Bot  
+│  
+├── index.html  
+├── style.css  
+├── script.js  
+└── README.md  
 
-<body>
+### Features
 
-<div class="chatbox">
-<h2>Cyber Safety Bot</h2>
+- Simple chatbot-style interface
+- Displays examples of common cyber scams
+- Provides basic cyber safety tips
+- Allows users to check suspicious messages
+- Detects scam-related keywords
 
-<div id="chat">
-<p class="bot">Hi! I help you stay safe online. Choose an option.</p>
-</div>
+### How the Bot Works
 
-<div class="buttons">
-<button onclick="showScams()">Scam Examples</button>
-<button onclick="checkMessage()">Check a Message</button>
-<button onclick="showTips()">Safety Tips</button>
-</div>
-```
-### script.js
-bash
-```
-</div>
-<script src="script.js"></script>
-</body>
-</html>
-script.js
-const chat = document.getElementById("chat");
-function addBotMessage(text) {
-    chat.innerHTML += "<p class='bot'>" + text + "</p>";
-}
-function addUserMessage(text) {
-    chat.innerHTML += "<p class='user'>" + text + "</p>";
-}
-function showScams() {
-    addUserMessage("Scams");
-    addBotMessage("• Messages asking for OTP");
-    addBotMessage("• Fake job messages");
-    addBotMessage("• Message saying account blocked");
-    addBotMessage("• Unknown links");
-}
-function showTips() {
-    addUserMessage("Tips");
-    addBotMessage("• Do not share OTP");
-    addBotMessage("• Do not share password");
-    addBotMessage("• Do not click unknown links");
-    addBotMessage("• Be careful online");
-}
-function checkMessage() {
-    let msg = prompt("Paste message here:");
-    if (msg === null || msg === "") {
-        return;
-    }
+1. The user opens the chatbot interface in a web browser.
+2. The bot greets the user and displays three options:
+   - Scam Examples
+   - Check a Message
+   - Safety Tips
+3. When the user selects an option, the bot responds inside the chat window.
+4. If the user chooses to check a message, the system scans the text for common scam-related keywords.
+5. If suspicious keywords are detected, the bot warns the user that the message may be unsafe.
 
-    addUserMessage(msg);
+### Example Scam Indicators
 
-    msg = msg.toLowerCase();
-    const keywords = ["otp", "click", "urgent", "verify", "blocked", "win"];
+- Messages asking for OTP
+- Fake job offers
+- Messages claiming the user’s account is blocked
+- Unknown or suspicious links
+- Messages claiming prize winnings
 
-    for (let i = 0; i < keywords.length; i++) {
-        if (msg.includes(keywords[i])) {
-            addBotMessage("This looks unsafe.");
-            addBotMessage("Do not click or reply.");
-            return;
-        }
-    }
+### Safety Tips Provided
 
-    addBotMessage("This looks safe.");
-}
-```
-### style.css
-bash
-```
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-}
+- Do not share OTP with anyone
+- Do not share passwords
+- Avoid clicking unknown links
+- Be cautious of urgent or suspicious messages
+- Verify information before responding
 
-.chatbox {
-    width: 400px;
-    margin: 50px auto;
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-}
+### Installation
 
-h2 {
-    text-align: center;
-}
+1. Clone the repository from GitHub.
+2. Open the project folder.
+3. Run the project by opening the **index.html** file in any web browser.
 
-#chat {
-    min-height: 200px;
-    margin-bottom: 10px;
-}
+### Applications
 
-.bot {
-    background-color: #e1f5fe;
-    padding: 8px;
-    border-radius: 5px;
-    margin: 5px 0;
-}
+- Cyber security awareness
+- Educational demonstrations
+- Beginner cybersecurity projects
+- Training users to identify scam messages
 
-.user {
-    background-color: #c8e6c9;
-    padding: 8px;
-    border-radius: 5px;
-    margin: 5px 0;
-    text-align: right;
-}
+### Future Improvements
 
-.buttons {
-    text-align: center;
-}
-
-button {
-    margin: 5px;
-    padding: 8px 12px;
-    cursor: pointer;
-}
-```
-
-
+- Add more scam detection keywords
+- Improve chatbot interaction
+- Implement AI-based scam detection
+- Make the interface mobile responsive
+- Integrate real-time phishing detection systems
