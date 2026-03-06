@@ -41,7 +41,7 @@ bash
 <button onclick="showTips()">Safety Tips</button>
 </div>
 ```
-###script.js
+### script.js
 bash
 ```
 </div>
@@ -92,7 +92,7 @@ function checkMessage() {
     addBotMessage("This looks safe.");
 }
 ```
-###style.css
+### style.css
 bash
 ```
 body {
@@ -142,4 +142,5 @@ button {
     cursor: pointer;
 }
 ```
+
 
