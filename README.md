@@ -13,7 +13,7 @@ The project is built using HTML, CSS, and JavaScript and runs directly in a web 
 - HTML
 - CSS
 - JavaScript
-- 
+
 ### index.html
 
 bash
@@ -142,3 +142,4 @@ button {
     cursor: pointer;
 }
 ```
+
