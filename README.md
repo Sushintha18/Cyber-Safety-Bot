@@ -42,6 +42,18 @@ Cyber-Safety-Bot
 4. If the user chooses to check a message, the system scans the text for common scam-related keywords.
 5. If suspicious keywords are detected, the bot warns the user that the message may be unsafe.
 
+## Project Output
+
+![Output1](images/image1.png)
+
+![Output2](images/image2.png)
+
+![Output3](images/image3.png)
+
+![Output4](images/image4.png)
+
+![Output5](images/image5.png)
+
 ### Example Scam Indicators
 
 - Messages asking for OTP
@@ -78,3 +90,4 @@ Cyber-Safety-Bot
 - Implement AI-based scam detection
 - Make the interface mobile responsive
 - Integrate real-time phishing detection systems
+
